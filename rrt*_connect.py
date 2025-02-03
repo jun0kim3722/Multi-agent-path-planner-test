@@ -428,10 +428,10 @@ class RRTConnect:
 
                     
                 # failed to find solution. Set min path to avoid
-                # for i in range(self.num_agt):
-                #     min_key = min(self.solutions[i])
-                #     self.min_paths[i] = self.solutions[i][min_key]
-                # self.check_path = True
+                for i in range(self.num_agt):
+                    min_key = min(self.solutions[i])
+                    self.min_paths[i] = self.solutions[i][min_key]
+                self.check_path = True
                 # print(time.time()- st)
                 print("init plan failed")
 
